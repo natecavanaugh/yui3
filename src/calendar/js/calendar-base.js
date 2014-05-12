@@ -1056,7 +1056,7 @@ Y.CalendarBase = Y.extend( CalendarBase, Y.Widget, {
      */
     _initCalendarPane : function (baseDate, pane_id) {
         // Get a list of short weekdays from the internationalization package, or else use default English ones.
-        var shortWeekDays = this.get('strings.very_short_weekdays') || ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+        var shortWeekDays = this.get('strings.very_short_weekdays') || Y.Intl.get('datatype-date-format').a || ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
             weekDays = Y.Intl.get('datatype-date-format').A,
             // Get the first day of the week from the internationalization package, or else use Sunday as default.
             firstday = this.get('strings.first_weekday') || 0,
